@@ -1,0 +1,90 @@
+{
+  "name": "n8n-smart-buffer",
+  "version": "1.0.0-alpha",
+  "description": "Intelligent message buffering for n8n workflows with semantic analysis and adaptive timing",
+  "main": "index.js",
+  "keywords": [
+    "n8n",
+    "workflow",
+    "chatbot",
+    "whatsapp",
+    "buffer",
+    "semantic",
+    "ai",
+    "intelligent",
+    "messaging",
+    "automation"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:workflow": "vitest run tests/workflow",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint nodes/ tests/ config/",
+    "lint:fix": "eslint nodes/ tests/ config/ --fix",
+    "setup": "node scripts/setup.js",
+    "validate-config": "node scripts/validate-config.js",
+    "start:dashboard": "node dashboard/server.js",
+    "build:docs": "node scripts/build-docs.js",
+    "dev": "npm run test:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/n8n-smart-buffer.git"
+  },
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://github.com/yourusername"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/n8n-smart-buffer/issues"
+  },
+  "homepage": "https://github.com/yourusername/n8n-smart-buffer#readme",
+  "dependencies": {
+    "ioredis": "^5.3.2",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "vitest": "^1.2.0",
+    "eslint": "^8.56.0",
+    "@vitest/coverage-v8": "^1.2.0",
+    "eslint-config-standard": "^17.1.0",
+    "prettier": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "files": [
+    "templates/",
+    "nodes/",
+    "config/",
+    "dashboard/",
+    "scripts/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "n8n": {
+    "compatibility": ">=0.220.0",
+    "templates": [
+      "templates/workflows/buffer-core.json",
+      "templates/workflows/metrics-dashboard.json"
+    ],
+    "customNodes": [
+      "nodes/semantic-analyzer.js",
+      "nodes/smart-orchestrator.js",
+      "nodes/buffer-manager.js"
+    ]
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/yourusername"
+  }
+}
